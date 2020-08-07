@@ -43,6 +43,6 @@ Structure can be seen by this picture, made by using `./png_maker.py ` (ignore t
 
 <img src="template.png" alt="Google Form" width="600"/>
 
-This example also does an excellent job of displaying some of the limitations of making the image. For [familytreemaker by adrienverge](https://github.com/adrienverge/familytreemaker) to work, and therefore `png_maker.py` to work, people without a spouse cannot have children. A spouse is always required. However if running `menu.py` with the same information, this is allowed. `menu.py` allows for people to have children without having a spouse, and for children to have a single parent. 
+This example also does an excellent job of displaying some of the limitations of making the image. For [familytreemaker by adrienverge](https://github.com/adrienverge/familytreemaker) to work, and therefore, for `png_maker.py` to work, people without a spouse cannot have children. A spouse is always required. However if running `menu.py` with the same information, this is allowed. `menu.py` allows for people to have children without having a spouse, and for children to have a single parent. 
 
 Therefore in the case of a single parent, they will cause issues in making of the png, but will be available for lookup. I recommend adding in a dummy spouse entry in the excel sheet, and assign it as the other parent. This won't affect the working of `menu.py`, and will allow `png_maker.py` to run as well. 
