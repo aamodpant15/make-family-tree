@@ -28,10 +28,18 @@ This repo also includes a `menu.py` file, this gives lookup features for the peo
 
 ### How does it work?		
 
-Excel Sheet is read and converted to a JSON file. (This JSON file is a nice thing to have, and can be used for personal projects as well)		
+Excel Sheet is read and converted to a JSON file. (This JSON file is handy to have and can be used for other projects as well)		
 JSON file is read, and `Member` data structures are created for each entry. Each `Member` has attributes as each column of the excel sheet.		
 `Member` is wrapped by a `Node` data structure. This has a `data` attribute which is a pointer to its respective the `Member` class.		
 `Node` has other attributes like `mother`, `father`, and `spouse`, which are references to `Member` objects, and `children` which is an array of references to `Member` objects.		
 
 A "Tree" is then created by adding references to each `Node`'s attributes.		
 This tree may be a disconnected tree, as there might be people who do not have entries, which leaves empty spots in a family tree. The missing responses that would complete the tree will then need to be added in manually
+
+Structure can be seen by this picture, made by using `./png_maker.py ` (ignore the spouse nodes).
+
+<img src="template.png" alt="Google Form" width="500"/>
+
+This example also does an excellent job of displaying some of the limitations of making the image. For the requirement, single people cannot have children in this program, a spouse is always required. However if running `./menu.py` with the same information, this is allowed. My program allows for people to have children without having a spouse, and for children to have a single parent. 
+
+Therefore in the case of a Single parent, they will cause issues in making of the png, but will be available for lookup. I recommend adding in a dummy spouse entry in the excel sheet, and assign it as the other parent.
