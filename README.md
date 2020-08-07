@@ -4,7 +4,7 @@
 Make a png file of a family tree from excel sheet/google form.	
 
 Requirements: 
-1. ![familytreemaker by adrienverge](https://github.com/adrienverge/familytreemaker)
+1. ! [familytreemaker by adrienverge](https://github.com/adrienverge/familytreemaker)
 2. Excel sheet of given format - (Timestamp, Name, Father's name, Mother's name, Partner's name, Sex). A google form with all of these formats as questions will atomatically create this sheet. 
 
 How to use:		
