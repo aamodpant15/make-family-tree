@@ -24,7 +24,7 @@ This repo also includes a `menu.py` file, this gives lookup features for the peo
 2. Getting relative's information (mother, father, children, spouse)
 
 **IMPORTANT**: 
-1. The file requires a connected tree without any disconnected elements. If a disconnected tree is present, multiple `.png` files will be created for each connected tree.
+1. The file requires a connected tree without any disconnected elements. If a disconnected tree is present, multiple `.png` files will be created for each connected subtree.
 
 2. This does not supported cyclic connections. This only happens when siblings have children, or a person is a child of themselves. [Adrien Verge](https://github.com/adrienverge) kindly let'\s us know that something is, `Seriously wrong`. This can happen due to a mistake during data input. Therefore, recheck the excel sheet if this error is shown.
 
