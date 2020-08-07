@@ -1,15 +1,15 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-from tree import Tree
 from os import system
+system("./make_JSON.py")
+
+from tree import Tree
 
 tree = Tree()
 nodes = tree.nodes
 roots = []
 string = []
-
-system("./make_JSON.py")
 
 def traverse(curr, currIndex):
     string[currIndex] += "\n"+curr.data.name + " (" + curr.data.s + ", id=" + str(curr.data.key) + ")\n"
@@ -32,6 +32,7 @@ for node in nodes:
         if node.mother is None:
             if node.spouse.mother is None or node.spouse.father is None:
                 roots.append(node)
+                # print("[Root node: "+node.data.name+"]")
 
 for root in roots:
     if root.spouse in roots:
@@ -59,3 +60,4 @@ for root in roots:
     command = """./familytreemaker.py -a '""" + root.data.name + """' """ + first_name + """.txt | dot -Tpng -o """ + first_name + """.png"""
     # print(command)
     system(command)
+    print("[Created "+first_name+".png]")
