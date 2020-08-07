@@ -26,7 +26,7 @@ This repo also includes a `menu.py` file, this gives lookup features for the peo
 **IMPORTANT**: 
 1. The file requires a connected tree without any disconnected elements. If a disconnected tree is present, multiple `.png` files will be created for each connected subtree.
 
-2. This does not supported cyclic connections. This only happens when siblings have children, or a person is a child of themselves. [Adrien Verge](https://github.com/adrienverge) kindly let'\s us know that something is, `Seriously wrong`. This can happen due to a mistake during data input. Therefore, recheck the excel sheet if this error is shown.
+2. This does not supported cyclic connections. This only happens when siblings have children, or a person is a child of themselves. [Adrien Verge](https://github.com/adrienverge) kindly lets us know that something is, `Seriously wrong`. This can happen due to a mistake during data input. Hence, recheck the excel sheet if this error is thrown.
 
 
 ### How does it work?		
@@ -41,7 +41,7 @@ This tree may be a disconnected tree, as there might be people who do not have e
 
 Structure can be seen by this picture, made by using `./png_maker.py ` (ignore the spouse nodes).
 
-<img src="template.png" alt="Google Form" width="500"/>
+<img src="template.png" alt="Google Form" width="600"/>
 
 This example also does an excellent job of displaying some of the limitations of making the image. For [familytreemaker by adrienverge](https://github.com/adrienverge/familytreemaker) to work, and therefore `png_maker.py` to work, people without a spouse cannot have children. A spouse is always required. However if running `menu.py` with the same information, this is allowed. `menu.py` allows for people to have children without having a spouse, and for children to have a single parent. 
 
