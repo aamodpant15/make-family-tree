@@ -23,7 +23,10 @@ This repo also includes a `menu.py` file, this gives lookup features for the peo
 1. Searching for members by Name
 2. Getting relative's information (mother, father, children, spouse)
 
-**IMPORTANT NOTE**: The file requires a connected tree without any disconnected elements. If a disconnected tree is present, multiple `.png` files will be created for each connected tree.
+**IMPORTANT**: 
+1. The file requires a connected tree without any disconnected elements. If a disconnected tree is present, multiple `.png` files will be created for each connected tree.
+
+2. This does not supported cyclic connections. This only happens when siblings have children, or a person is a child of themselves. [Adrien Verge](https://github.com/adrienverge) kindly let'\s us know that something is, `Seriously wrong`. This can happen due to a mistake during data input. Therefore, recheck the excel sheet if this error is shown.
 
 
 ### How does it work?		
@@ -40,6 +43,6 @@ Structure can be seen by this picture, made by using `./png_maker.py ` (ignore t
 
 <img src="template.png" alt="Google Form" width="500"/>
 
-This example also does an excellent job of displaying some of the limitations of making the image. For the requirement, single people cannot have children in this program, a spouse is always required. However if running `./menu.py` with the same information, this is allowed. My program allows for people to have children without having a spouse, and for children to have a single parent. 
+This example also does an excellent job of displaying some of the limitations of making the image. For [familytreemaker by adrienverge](https://github.com/adrienverge/familytreemaker) to work, and therefore `png_maker.py` to work, people without a spouse cannot have children. A spouse is always required. However if running `menu.py` with the same information, this is allowed. `menu.py` allows for people to have children without having a spouse, and for children to have a single parent. 
 
-Therefore in the case of a Single parent, they will cause issues in making of the png, but will be available for lookup. I recommend adding in a dummy spouse entry in the excel sheet, and assign it as the other parent.
+Therefore in the case of a single parent, they will cause issues in making of the png, but will be available for lookup. I recommend adding in a dummy spouse entry in the excel sheet, and assign it as the other parent. This won't affect the working of `menu.py`, and will allow `png_maker.py` to run as well. 
